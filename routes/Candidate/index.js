@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+
 const router = express.Router();
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
@@ -24,9 +25,10 @@ router.get('/addCandidate', async (req, res) => {
  */
 router.post('/addCandidate', async (req, res) => {
   console.log(req.body);
-  
-  res.render('Candidate/addCandidate.ejs');
+  // const { } = req.body;
 
+
+  res.render('Candidate/addCandidate.ejs');
 });
 
 module.exports = router;

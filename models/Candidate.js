@@ -6,7 +6,7 @@ const candidateSchema = new mongoose.Schema({
   name: String,
   phone1: Number,
   DOB: String,
-  phone2: String,
+  phone2: Number,
   mailId: String,
   addressLine1: String,
   addressLine2: String,
@@ -14,6 +14,20 @@ const candidateSchema = new mongoose.Schema({
   district: String,
   state: String,
   country: String,
+  gender: String,
+  source: String,
+  sourceType: String,
+  employmentStatus: String,
+  occupation: String,
+  currentAnnualIncome: Number,
+  educationalQualification: String,
+  noOfSuccessfulEnterprises: Number,
+  noOfFailedEnterprises: Number,
+  hasBankAccount: String,
+  hasCreditHistory: String,
+  hasAssessets: String,
+  needsTraining: String,
+  status: String,
 });
 
 const Candidate = mongoose.model('Candidate', candidateSchema);
@@ -29,7 +43,7 @@ module.exports = Candidate;
  *  Email ID,
  *  [Address Line 1 *,
  *  Address Line 2 *,
- * City *,
+ *  City *,
  *  District *,
  *  State *,
  *  Country *]

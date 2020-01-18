@@ -12,34 +12,201 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
     <link rel="stylesheet" href="/stylesheets/main.css">
 
+    <!-- google maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7RDAq6Ei7au_EByvVb_1MCLnKpnNtpHM&v=3.exp&sensor=false&libraries=places"></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <meta charset="utf-8">
+
 <body>
     <br>
+
     <div class="ui container">
-        
+
+        <h1 class="ui header">Add NEW CANDIDATE</h1>
+        <br>
+
         <%# Form for adding Candidate%>
         <form class="ui form" action="/addCandidate" method="post">
             <div class="fields">
                 <div class="field">
                     <div class="required field">
                         <label>Aadhar Number</label>
-                        <input required name="aadharNumber"  type="text" placeholder="aadharNumber">
+                        <input  name="aadharNumber"  type="text" placeholder="aadharNumber" maxlength="12" minlength="12">
                     </div>
                 </div>
                 <div class="field">
-                    <label>Name</label>
-                    <input  name="name" type="text" placeholder="name">
+                    <div class="required field">
+                        <label>Address</label>
+                        <input id="searchTextField" type="text" size="50" name="address">
+                        <script>
+                            function initialize() {
+                                var input = document.getElementById('searchTextField');
+                                const result = new google.maps.places.Autocomplete(input);
+                                console.log('result::::',result);
+                                
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
+                    </div>
                 </div>
                 <div class="field">
-                    <label>Phone Number</label>
-                    <input name="phone1" type="text" placeholder="phone1">
+                    <div class="required field">
+                        <label>Name</label>
+                        <input  name="name" type="text" placeholder="name">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Phone Number</label>
+                        <input  name="phone1" type="text" placeholder="phone1" minlength="10" maxlength="10">
+                    </div>
+                </div>
+
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <div class="required field">
+                        <label>D.O.B.</label>
+                        <div class="ui calendar" id="date">
+                            <div class="ui input left icon">
+                                <i class="calendar icon"></i>
+                                <input name="DOB" type="text" placeholder="Date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Alternate Phone</label>
+                        <input  name="phone2" type="number" placeholder="phone2" minlength="10" maxlength="10">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Email ID</label>
+                    <input  name="mailId" type="email" placeholder="mailId">
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Gender</label>
+                        <!-- <input  name="gender" type="text" placeholder="gender"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="gender" placeholder="gender">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Gender</div>
+                            <div class="menu">
+                                <div class="item" data-value="1">Male</div>
+                                <div class="item" data-value="0">Female</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Source</label>
+                        <input  name="source" type="text" placeholder="source">
+                    </div>
                 </div>
             </div>
+            <div class="fields">
+                <div class="field">
+                    <div class="required field">
+                        <label>Source Type</label>
+                        <input  name="sourceType" type="text" placeholder="sourceType">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Employment Status</label>
+                        <input  name="employmentStatus" type="text" placeholder="employmentStatus">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Occupation</label>
+                        <input  name="occupation" type="text" placeholder="occupation">
+                    </div>
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <div class="required field">
+                        <label>Current Annual Income</label>
+                        <input  name="currentAnnualIncome" type="text" placeholder="currentAnnualIncome">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Educational Qualification</label>
+                        <input  name="educationalQualification" type="text" placeholder="educationalQualification">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>No. of Successful Enterprises</label>
+                        <input  name="noOfSuccessfulEnterprises" type="text" placeholder="noOfSuccessfulEnterprises">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>No. of Failed Enterprises</label>
+                        <input  name="noOfFailedEnterprises" type="text" placeholder="noOfFailedEnterprises">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Has Banck Account</label>
+                        <input  name="hasBankAccount" type="text" placeholder="hasBankAccount">
+                    </div>
+                </div>
+            </div>
+            <div class="fields">
+                <div class="field">
+                    <div class="required field">
+                        <label>Has Credit Card History</label>
+                        <input  name="hasCreditHistory" type="text" placeholder="hasCreditHistory">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Has Assets</label>
+                        <input  name="hasAssessets" type="text" placeholder="hasAssessets">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Needs Training</label>
+                        <input  name="needsTraining" type="text" placeholder="needsTraining">
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="required field">
+                        <label>Status</label>
+                        <input  name="status" type="text" placeholder="status">
+                    </div>
+                </div>
+            </div>
+
             <input type="submit" class="ui basic blue button"  value="Submit">
         </form>
 
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
+
+<script>
+    $('#date').calendar({
+        type: 'date'
+    });
+    
+    $('.ui.dropdown').dropdown();
 </script>
+
 </body>
 
 </html>
