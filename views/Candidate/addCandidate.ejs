@@ -94,14 +94,13 @@
                 <div class="field">
                     <div class="required field">
                         <label>Gender</label>
-                        <!-- <input  name="gender" type="text" placeholder="gender"> -->
                         <div class="ui selection dropdown">
                             <input type="hidden" name="gender" placeholder="gender">
                             <i class="dropdown icon"></i>
                             <div class="default text">Gender</div>
                             <div class="menu">
-                                <div class="item" data-value="1">Male</div>
-                                <div class="item" data-value="0">Female</div>
+                                <div class="item" data-value="Male">Male</div>
+                                <div class="item" data-value="Female">Female</div>
                             </div>
                         </div>
                     </div>
@@ -109,7 +108,19 @@
                 <div class="field">
                     <div class="required field">
                         <label>Source</label>
-                        <input  name="source" type="text" placeholder="source">
+                        <!-- <input  name="source" type="text" placeholder="source"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="source" placeholder="source">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">source</div>
+                            <div class="menu">
+                                <div class="item" data-value="Event">Event</div>
+                                <div class="item" data-value="Roadshow">Roadshow</div>
+                                <div class="item" data-value="Referral">Referral</div>
+                                <div class="item" data-value="Word of mouth">Word of mouth</div>
+                                <div class="item" data-value="Press">Press</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
