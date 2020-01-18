@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js">
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+<body>
+    <br>
+    <div class="ui container">
+        
+        <%# Form for adding Candidate%>
+        <form class="ui form" action="/addCandidate" method="post">
+            <div class="fields">
+                <div class="field">
+                    <div class="required field">
+                        <label>Aadhar Number</label>
+                        <input required name="aadharNumber"  type="text" placeholder="aadharNumber">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Name</label>
+                    <input  name="name" type="text" placeholder="name">
+                </div>
+                <div class="field">
+                    <label>Phone Number</label>
+                    <input name="phone1" type="text" placeholder="phone1">
+                </div>
+            </div>
+            <input type="submit" class="ui basic blue button"  value="Submit">
+        </form>
+
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js">
+</script>
+</body>
+
+</html>
