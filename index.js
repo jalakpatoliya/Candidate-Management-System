@@ -12,7 +12,12 @@ const app = express();
  * Connecting with DB
  */
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/CMS_DB', (err, data) => {
+// mongoose.connect('mongodb://localhost/CMS_DB', (err, data) => {
+//   if (err) { console.log('connection error', err); } else {
+//     console.log('DB connected sucessfully');
+//   }
+// });
+mongoose.connect(`mongodb://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@ds211099.mlab.com:11099/candidate-management-system`, (err, data) => {
   if (err) { console.log('connection error', err); } else {
     console.log('DB connected sucessfully');
   }
