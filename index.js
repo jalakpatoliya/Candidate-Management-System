@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const multer = require('multer');
 // const app = require('./app');
 const express = require('express');
+require('dotenv').config();
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 /**
@@ -45,6 +47,6 @@ app.use(routes);
 //   res.end('done');
 // });
 
-app.listen(8080, () => {
-  console.log('server started at 8080');
+app.listen(PORT, () => {
+  console.log(`Server started at port:${PORT}`);
 });
