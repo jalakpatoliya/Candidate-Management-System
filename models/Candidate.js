@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const candidateSchema = new mongoose.Schema({
 //   _id: Number,
-  aadharNumber: String,
+  aadhaarNumber: String,
   name: String,
   phone1: Number,
   DOB: String,

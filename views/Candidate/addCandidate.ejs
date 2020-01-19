@@ -36,8 +36,8 @@
             <div class="fields">
                 <div class="field">
                     <div class="required field">
-                        <label>Aadhar Number</label>
-                        <input  name="aadharNumber"  type="text" placeholder="aadharNumber" maxlength="12" minlength="12">
+                        <label>Aadhaar Number</label>
+                        <input  name="aadhaarNumber"  type="text" placeholder="aadhaarNumber" maxlength="12" minlength="12">
                     </div>
                 </div>
                 <div class="field">
@@ -128,19 +128,51 @@
                 <div class="field">
                     <div class="required field">
                         <label>Source Type</label>
-                        <input  name="sourceType" type="text" placeholder="sourceType">
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="sourceType" placeholder="sourceType">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">sourceType</div>
+                            <div class="menu">
+                                <div class="item" data-value="Inbound">Inbound</div>
+                                <div class="item" data-value="Outbound">Outbound</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Employment Status</label>
-                        <input  name="employmentStatus" type="text" placeholder="employmentStatus">
+                        <!-- <input  name="employmentStatus" type="text" placeholder="employmentStatus"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="employmentStatus" placeholder="employmentStatus">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">employmentStatus</div>
+                            <div class="menu">
+                                <div class="item" data-value="Self - employed">Self - employed</div>
+                                <div class="item" data-value="Unemployed">Unemployed</div>
+                                <div class="item" data-value="Employed">Employed</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Occupation</label>
-                        <input  name="occupation" type="text" placeholder="occupation">
+                        <!-- <input  name="occupation" type="text" placeholder="occupation"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="occupation" placeholder="occupation">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">occupation</div>
+                            <div class="menu">
+                                <div class="item" data-value="Farmer">Farmer</div>
+                                <div class="item" data-value="Mason">Mason</div>
+                                <div class="item" data-value="Poultry Farmer">Poultry Farmer</div>
+                                <div class="item" data-value="Shopkeeper">Shopkeeper</div>
+                                <div class="item" data-value="Mechanic">Mechanic</div>
+                                <div class="item" data-value="Teacher">Teacher</div>
+                                <div class="item" data-value="Housewife">Housewife</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,31 +180,67 @@
                 <div class="field">
                     <div class="required field">
                         <label>Current Annual Income</label>
-                        <input  name="currentAnnualIncome" type="text" placeholder="currentAnnualIncome">
+                        <!-- <input  name="currentAnnualIncome" type="text" placeholder="currentAnnualIncome"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="currentAnnualIncome" placeholder="currentAnnualIncome">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">currentAnnualIncome</div>
+                            <div class="menu">
+                                <div class="item" data-value="<2 lacs/annum">< 2 lacs / annum</div>
+                                <div class="item" data-value="2-5 lacs/annum">2 - 5 lacs / annum</div>
+                                <div class="item" data-value="5-10 lacs/annum">5 - 10 lacs / annum</div>
+                                <div class="item" data-value="10-20 lacs/annum">10 - 20 lacs / annum</div>
+                                <div class="item" data-value=">20 lacs/annum">> 20 lacs / annum</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Educational Qualification</label>
-                        <input  name="educationalQualification" type="text" placeholder="educationalQualification">
+                        <!-- <input  name="educationalQualification" type="text" placeholder="educationalQualification"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="educationalQualification" placeholder="educationalQualification">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">educationalQualification</div>
+                            <div class="menu">
+                                <div class="item" data-value="Never went to school">Never went to school</div>
+                                <div class="item" data-value="5th pass">5th pass</div>
+                                <div class="item" data-value="8th pass">8th pass</div>
+                                <div class="item" data-value="10th pass">10th pass</div>
+                                <div class="item" data-value="12th pass">12th pass</div>
+                                <div class="item" data-value="Diploma">Diploma</div>
+                                <div class="item" data-value="Graduate">Graduate</div>
+                                <div class="item" data-value="Post-graduate">Post - graduate</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>No. of Successful Enterprises</label>
-                        <input  name="noOfSuccessfulEnterprises" type="text" placeholder="noOfSuccessfulEnterprises">
+                        <input  name="noOfSuccessfulEnterprises" type="number" placeholder="noOfSuccessfulEnterprises">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>No. of Failed Enterprises</label>
-                        <input  name="noOfFailedEnterprises" type="text" placeholder="noOfFailedEnterprises">
+                        <input  name="noOfFailedEnterprises" type="number" placeholder="noOfFailedEnterprises">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Has Banck Account</label>
-                        <input  name="hasBankAccount" type="text" placeholder="hasBankAccount">
+                        <!-- <input  name="hasBankAccount" type="text" placeholder="hasBankAccount"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="hasBankAccount" placeholder="hasBankAccount">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">hasBankAccount</div>
+                            <div class="menu">
+                                <div class="item" data-value="Y">Yes</div>
+                                <div class="item" data-value="N">No</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -180,25 +248,80 @@
                 <div class="field">
                     <div class="required field">
                         <label>Has Credit Card History</label>
-                        <input  name="hasCreditHistory" type="text" placeholder="hasCreditHistory">
+                        <!-- < input  name="hasCreditHistory" type="text" placeholder="hasCreditHistory"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="hasCreditHistory" placeholder="hasCreditHistory">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">hasCreditHistory</div>
+                            <div class="menu">
+                                <div class="item" data-value="Y">Yes</div>
+                                <div class="item" data-value="N">No</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Has Assets</label>
-                        <input  name="hasAssessets" type="text" placeholder="hasAssessets">
+                        <!-- <input  name="hasAssessets" type="text" placeholder="hasAssessets"> -->
+                        <div class="ui fluid multiple search normal selection dropdown">
+                            <input type="hidden" name="hasAssessets" placeholder="hasAssessets">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">Select </div>
+                            <div class="menu">
+                                <div class="item" data-value="None"> None</div>
+                                <div class="item" data-value="Land">Land</div>
+                                <div class="item" data-value="House">House</div>
+                                <div class="item" data-value="Shop">Shop</div>
+                                <div class="item" data-value="Vehicles">Vehicles </div>
+                                <div class="item" data-value="Cattle">Cattle</div>
+                                <div class="item" data-value="Others">Others</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Needs Training</label>
-                        <input  name="needsTraining" type="text" placeholder="needsTraining">
+                        <!-- <input  name="needsTraining" type="text" placeholder="needsTraining"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="needsTraining" placeholder="needsTraining">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">needsTraining</div>
+                            <div class="menu">
+                                <div class="item" data-value="Y">Yes</div>
+                                <div class="item" data-value="N">No</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Status</label>
-                        <input  name="status" type="text" placeholder="status">
+                        <!-- <input  name="status" type="text" placeholder="status"> -->
+                        <div class="ui selection dropdown">
+                            <input type="hidden" name="status" placeholder="status">
+                            <i class="dropdown icon"></i>
+                            <div class="default text">status</div>
+                            <div class="menu">
+                                <div class="item" data-value="Interested in exploring">Interested in exploring</div>
+                                <div class="item" data-value="Mason">Mason</div>
+                                <div class="item" data-value="Poultry Farmer">Poultry Farmer</div>
+                                <div class="item" data-value="Undergoing Training">Undergoing Training</div>
+                                <div class="item" data-value="Training Complete">Training Complete</div>
+                                <div class="item" data-value="Stream identified">Stream identified</div>
+                                <div class="item" data-value="Resume made">Resume made</div>
+                                <div class="item" data-value="Resume submitted">Resume submitted</div>
+                                <div class="item" data-value="Resume sent for processing">Resume sent for processing</div>
+                                <div class="item" data-value="Resume declined">Resume declined</div>
+                                <div class="item" data-value="Resume accepted">Resume accepted</div>
+                                <div class="item" data-value="Due diligence">Due diligence</div>
+                                <div class="item" data-value="Background check">Background check</div>
+                                <div class="item" data-value="Job offer received">Job offer received</div>
+                                <div class="item" data-value="No longer interested">No longer interested</div>
+                                <div class="item" data-value="Deceased">Deceased</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
