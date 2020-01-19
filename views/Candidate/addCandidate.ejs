@@ -23,27 +23,37 @@
         src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
     <meta charset="utf-8">
 
-<body>
-    <br>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+<body>
     <div class="ui container">
+        <br>
+        <div class="ui secondary pointing menu">
+            <a class="active item nva" href="/addCandidate">
+                <i class="address card outline icon"></i>Add Candidate</a>
+            
+            <a class="item nav" href="/getAllCandidates">
+                <i class="user icon"></i>View all candidates</a>
+        
+        </div>
+
 
         <h1 class="ui header">Add NEW CANDIDATE</h1>
         <br>
 
         <%# Form for adding Candidate%>
-        <form class="ui form" action="/addCandidate" method="post">
+        <form  class="ui form" action="/addCandidate" method="post">
             <div class="fields">
                 <div class="field">
                     <div class="required field">
                         <label>Aadhaar Number</label>
-                        <input  name="aadhaarNumber"  type="text" placeholder="aadhaarNumber" maxlength="12" minlength="12">
+                        <input  required name="aadhaarNumber"  type="text" placeholder="aadhaarNumber" maxlength="12" minlength="12">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Address</label>
-                        <input id="searchTextField" type="text" size="50" name="address">
+                        <input id="searchTextField" type="text" size="50" required name="address">
                         <script>
                             function initialize() {
                                 var input = document.getElementById('searchTextField');
@@ -58,13 +68,13 @@
                 <div class="field">
                     <div class="required field">
                         <label>Name</label>
-                        <input  name="name" type="text" placeholder="name">
+                        <input  required name="name" type="text" placeholder="name">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Phone Number</label>
-                        <input  name="phone1" type="text" placeholder="phone1" minlength="10" maxlength="10">
+                        <input  required name="phone1" type="text" placeholder="phone1" minlength="10" maxlength="10">
                     </div>
                 </div>
 
@@ -76,7 +86,7 @@
                         <div class="ui calendar" id="date">
                             <div class="ui input left icon">
                                 <i class="calendar icon"></i>
-                                <input name="DOB" type="text" placeholder="Date">
+                                <input required name="DOB" type="text" placeholder="Date">
                             </div>
                         </div>
                     </div>
@@ -84,18 +94,18 @@
                 <div class="field">
                     <div class="required field">
                         <label>Alternate Phone</label>
-                        <input  name="phone2" type="number" placeholder="phone2" minlength="10" maxlength="10">
+                        <input  required name="phone2" type="text" placeholder="phone2" minlength="10" maxlength="10">
                     </div>
                 </div>
                 <div class="field">
                     <label>Email ID</label>
-                    <input  name="mailId" type="email" placeholder="mailId">
+                    <input  required name="mailId" type="email" placeholder="mailId">
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Gender</label>
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="gender" placeholder="gender">
+                            <input type="hidden" required name="gender" placeholder="gender">
                             <i class="dropdown icon"></i>
                             <div class="default text">Gender</div>
                             <div class="menu">
@@ -108,9 +118,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Source</label>
-                        <!-- <input  name="source" type="text" placeholder="source"> -->
+                        <!-- <input  required name="source" type="text" placeholder="source"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="source" placeholder="source">
+                            <input type="hidden" required name="source" placeholder="source">
                             <i class="dropdown icon"></i>
                             <div class="default text">source</div>
                             <div class="menu">
@@ -129,7 +139,7 @@
                     <div class="required field">
                         <label>Source Type</label>
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="sourceType" placeholder="sourceType">
+                            <input type="hidden" required name="sourceType" placeholder="sourceType">
                             <i class="dropdown icon"></i>
                             <div class="default text">sourceType</div>
                             <div class="menu">
@@ -142,9 +152,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Employment Status</label>
-                        <!-- <input  name="employmentStatus" type="text" placeholder="employmentStatus"> -->
+                        <!-- <input  required name="employmentStatus" type="text" placeholder="employmentStatus"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="employmentStatus" placeholder="employmentStatus">
+                            <input type="hidden" required name="employmentStatus" placeholder="employmentStatus">
                             <i class="dropdown icon"></i>
                             <div class="default text">employmentStatus</div>
                             <div class="menu">
@@ -158,9 +168,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Occupation</label>
-                        <!-- <input  name="occupation" type="text" placeholder="occupation"> -->
+                        <!-- <input  required name="occupation" type="text" placeholder="occupation"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="occupation" placeholder="occupation">
+                            <input type="hidden" required name="occupation" placeholder="occupation">
                             <i class="dropdown icon"></i>
                             <div class="default text">occupation</div>
                             <div class="menu">
@@ -180,9 +190,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Current Annual Income</label>
-                        <!-- <input  name="currentAnnualIncome" type="text" placeholder="currentAnnualIncome"> -->
+                        <!-- <input  required name="currentAnnualIncome" type="text" placeholder="currentAnnualIncome"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="currentAnnualIncome" placeholder="currentAnnualIncome">
+                            <input type="hidden" required name="currentAnnualIncome" placeholder="currentAnnualIncome">
                             <i class="dropdown icon"></i>
                             <div class="default text">currentAnnualIncome</div>
                             <div class="menu">
@@ -198,9 +208,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Educational Qualification</label>
-                        <!-- <input  name="educationalQualification" type="text" placeholder="educationalQualification"> -->
+                        <!-- <input  required name="educationalQualification" type="text" placeholder="educationalQualification"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="educationalQualification" placeholder="educationalQualification">
+                            <input type="hidden" required name="educationalQualification" placeholder="educationalQualification">
                             <i class="dropdown icon"></i>
                             <div class="default text">educationalQualification</div>
                             <div class="menu">
@@ -219,21 +229,21 @@
                 <div class="field">
                     <div class="required field">
                         <label>No. of Successful Enterprises</label>
-                        <input  name="noOfSuccessfulEnterprises" type="number" placeholder="noOfSuccessfulEnterprises">
+                        <input  required name="noOfSuccessfulEnterprises" type="number" placeholder="noOfSuccessfulEnterprises">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>No. of Failed Enterprises</label>
-                        <input  name="noOfFailedEnterprises" type="number" placeholder="noOfFailedEnterprises">
+                        <input  required name="noOfFailedEnterprises" type="number" placeholder="noOfFailedEnterprises">
                     </div>
                 </div>
                 <div class="field">
                     <div class="required field">
                         <label>Has Banck Account</label>
-                        <!-- <input  name="hasBankAccount" type="text" placeholder="hasBankAccount"> -->
+                        <!-- <input  required name="hasBankAccount" type="text" placeholder="hasBankAccount"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="hasBankAccount" placeholder="hasBankAccount">
+                            <input type="hidden" required name="hasBankAccount" placeholder="hasBankAccount">
                             <i class="dropdown icon"></i>
                             <div class="default text">hasBankAccount</div>
                             <div class="menu">
@@ -248,9 +258,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Has Credit Card History</label>
-                        <!-- < input  name="hasCreditHistory" type="text" placeholder="hasCreditHistory"> -->
+                        <!-- < input  required name="hasCreditHistory" type="text" placeholder="hasCreditHistory"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="hasCreditHistory" placeholder="hasCreditHistory">
+                            <input type="hidden" required name="hasCreditHistory" placeholder="hasCreditHistory">
                             <i class="dropdown icon"></i>
                             <div class="default text">hasCreditHistory</div>
                             <div class="menu">
@@ -263,9 +273,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Has Assets</label>
-                        <!-- <input  name="hasAssessets" type="text" placeholder="hasAssessets"> -->
+                        <!-- <input  required name="hasAssessets" type="text" placeholder="hasAssessets"> -->
                         <div class="ui fluid multiple search normal selection dropdown">
-                            <input type="hidden" name="hasAssessets" placeholder="hasAssessets">
+                            <input type="hidden" required name="hasAssets" placeholder="hasAssessets">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select </div>
                             <div class="menu">
@@ -283,9 +293,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Needs Training</label>
-                        <!-- <input  name="needsTraining" type="text" placeholder="needsTraining"> -->
+                        <!-- <input  required name="needsTraining" type="text" placeholder="needsTraining"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="needsTraining" placeholder="needsTraining">
+                            <input type="hidden" required name="needsTraining" placeholder="needsTraining">
                             <i class="dropdown icon"></i>
                             <div class="default text">needsTraining</div>
                             <div class="menu">
@@ -298,9 +308,9 @@
                 <div class="field">
                     <div class="required field">
                         <label>Status</label>
-                        <!-- <input  name="status" type="text" placeholder="status"> -->
+                        <!-- <input  required name="status" type="text" placeholder="status"> -->
                         <div class="ui selection dropdown">
-                            <input type="hidden" name="status" placeholder="status">
+                            <input type="hidden" required name="status" placeholder="status">
                             <i class="dropdown icon"></i>
                             <div class="default text">status</div>
                             <div class="menu">
@@ -338,7 +348,15 @@
         type: 'date'
     });
     
+    $(document).ready(function () {
+            $('.ui .item .nav').on('click', function () {
+                $('.ui .item .nav').removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
     $('.ui.dropdown').dropdown();
+
 </script>
 
 </body>

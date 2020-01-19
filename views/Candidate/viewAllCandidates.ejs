@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js">
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+
+    <!-- google maps -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7RDAq6Ei7au_EByvVb_1MCLnKpnNtpHM&v=3.exp&sensor=false&libraries=places"></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.css"
+        rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script
+        src="https://cdn.rawgit.com/mdehoog/Semantic-UI/6e6d051d47b598ebab05857545f242caf2b4b48c/dist/semantic.min.js"></script>
+    <meta charset="utf-8">
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<body>
+    <div class="ui container">
+        <br>
+        <div class="ui secondary pointing menu">
+            <a class="item" href="/addCandidate">
+                <i class="address card outline icon"></i>Add Candidate</a>
+            <a class="active item">
+                <i class="user icon"></i>View all candidates</a>
+
+        </div>
+
+
+        <h1 class="ui header">REGISTERED CANDIDATES</h1>
+        <br>
+
+        <!-- Show all Candidates -->
+        <div style="width:1200px;overflow-x: scroll;">
+                <table class="ui green table">
+                    <thead>
+                        <tr>
+                            <th>Aadhar Number</th>
+                            <th>Name</th>
+                            <th>Mobile Number</th>
+                            <th>DOB</th>
+                            <th>Alternate Mobile Number</th>
+                            <th>EmailID</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Country</th>
+                            <th>Gender</th>
+                            <th>Source</th>
+                            <th>SourceType</th>
+                            <th>EmploymentStatus</th>
+                            <th>Occupation</th>
+                            <th>Current Annual Salary</th>
+                            <th>Educational Qualification</th>
+                            <th>No. of Successfull Enterprises</th>
+                            <th>No. of Unsuccessfull Enterprises</th>
+                            <th>Has Bank Account</th>
+                            <th>Has Credit History</th>
+                            <th>Has Assets</th>
+                            <th>Needs Training</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <%  for (let i = 0; i < data.length; i++) {
+                            const singledata = data[i];  %>
+                            <tr>
+                                <td><%=singledata.aadhaarNumber %></td>
+                                <td><%=singledata.name %></td>
+                                <td><%=singledata.phone1 %></td>
+                                <td><%=singledata.DOB %></td>
+                                <td><%=singledata.phone2 %></td>
+                                <td><%=singledata.mailId %></td>
+                                <td><%=singledata.addressLine1 %></td>
+                                <td><%=singledata.city %></td>
+                                <td><%=singledata.state %></td>
+                                <td><%=singledata.country %></td>
+                                <td><%=singledata.gender %></td>
+                                <td><%=singledata.source %></td>
+                                <td><%=singledata.sourceType %></td>
+                                <td><%=singledata.employmentStatus %></td>
+                                <td><%=singledata.occupation %></td>
+                                <td><%=singledata.currentAnnualIncome %></td>
+                                <td><%=singledata.educationalQualification %></td>
+                                <td><%=singledata.noOfSuccessfulEnterprises %></td>
+                                <td><%=singledata.noOfFailedEnterprises %></td>
+                                <td><%=singledata.hasBankAccount %></td>
+                                <td><%=singledata.hasCreditHistory %></td>
+                                <td><%=singledata.hasAssets %></td>
+                                <td><%=singledata.needsTraining %></td>
+                                <td><%=singledata.status %></td>
+                            </tr>
+                            <% } %>
+                            
+                        </tbody>
+                    </table>
+                </div>
+       
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.js"></script>
+
+</body>
+
+</html>
