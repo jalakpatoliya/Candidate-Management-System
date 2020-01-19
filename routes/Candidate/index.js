@@ -12,7 +12,7 @@ const Candidate = require('../../models/Candidate');
  * Homepage
  */
 router.get('/', async (req, res) => {
-  res.render('index.ejs');
+  res.render('Candidate/addCandidate.ejs');
 });
 
 /**
